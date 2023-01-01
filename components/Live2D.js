@@ -26,7 +26,17 @@ export default function Live2D() {
     return <></>
   }
 
-  return <canvas id="live2d" className='cursor-pointer' width="280" height="250" onClick={handleClick} alt='切换主题' title='切换主题' />
+  return (
+    <canvas
+      id="live2d"
+      className={BLOG.WIDGET_PET_TOUCH ? 'cursor-pointer' : undefined}
+      width={BLOG.WIDGET_PET_WIDTH}
+      height={BLOG.WIDGET_PET_HEIGHT}
+      onClick={handleClick}
+      alt="切换主题"
+      title="切换主题"
+    />
+  )
 }
 
 /**

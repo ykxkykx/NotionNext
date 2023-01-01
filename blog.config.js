@@ -63,8 +63,11 @@ const BLOG = {
 
   // 悬浮挂件
   WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || true, // 是否显示宠物挂件
+  WIDGET_PET_WIDTH: process.env.NEXT_PUBLIC_WIDGET_PET_WIDTH || 280, // 挂件在 canvas 里渲染的宽度
+  WIDGET_PET_HEIGHT: process.env.NEXT_PUBLIC_WIDGET_PET_HEIGHT || 250, // 挂件在 canvas 里渲染的高度
   WIDGET_PET_LINK: 'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
   WIDGET_PET_SWITCH_THEME: true, // 点击宠物挂件切换博客主题
+  WIDGET_PET_TOUCH: true, // 是否能被鼠标点击到
 
   // ----> 评论互动 可同时开启多个支持 WALINE VALINE GISCUS CUSDIS UTTERRANCES GITALK
 
