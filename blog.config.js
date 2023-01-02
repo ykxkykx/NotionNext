@@ -11,7 +11,7 @@ const BLOG = {
   APPEARANCE: 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
 
   AUTHOR: '游方', // 作者
-  BIO: '人生的道路……并不是他人可以施舍赐予的东西。而是需要在黑暗中不断摸索，以自身的力量探寻才能得到的宝藏。', // 作者简介
+  BIO: '要守护就守护到底，要舍弃就别再回头，一旦作出选择，就要贯彻到底。', // 作者简介
   LINK: 'https://blog.ykxkykx.cn', // 网站地址
   KEYWORDS: '空の轨迹, 博客', // 网站关键词 英文逗号隔开
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
