@@ -2,7 +2,7 @@
 
 const COVER_FC = 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/adb62bf0-ea14-4b28-825c-702a4441fea3/fc.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T181053Z&X-Amz-Expires=86400&X-Amz-Signature=9d11fac195a98f728f51908c671aa0c61bf778683024fb8230ee431f18c3fe51&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22fc.jpg%22&x-id=GetObject'
 const COVER_SC = 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ef622ba0-2ccd-4b6c-8615-f393950cea68/sc.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T183742Z&X-Amz-Expires=86400&X-Amz-Signature=0d52bad83f593da791579ab282ee9dae06986e8542dd6596fd3e5a48fd211557&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22sc.jpg%22&x-id=GetObject'
-// const COVER_3RD = 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c712f289-f5a0-4130-baad-a61175f345d9/3rd.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T183838Z&X-Amz-Expires=86400&X-Amz-Signature=c2957378fa4331004483969236d2003e17806e5b039bed30ae25c36b2ec5dec3&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%223rd.jpg%22&x-id=GetObject'
+const COVER_3RD = 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c712f289-f5a0-4130-baad-a61175f345d9/3rd.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T183838Z&X-Amz-Expires=86400&X-Amz-Signature=c2957378fa4331004483969236d2003e17806e5b039bed30ae25c36b2ec5dec3&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%223rd.jpg%22&x-id=GetObject'
 const OST_FC = [
   {
     name: '暗がりがくれた安らぎ',
@@ -308,12 +308,108 @@ const OST_SC = [
   }
 ]
 const OST_3RD = [
-  // {
-  //   name: '',
-  //   artist: 'Falcom Sound Team jdk',
-  //   url: '',
-  //   cover: COVER_3RD
-  // }
+  {
+    name: '大切なもの',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/71ac855a-beb5-4d8a-b281-69b10f33b829/%E5%A4%A7%E5%88%87%E3%81%AA%E3%82%82%E3%81%AE.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191354Z&X-Amz-Expires=86400&X-Amz-Signature=25e9893ab789ce6e25cccaae9cf4c0a33658731a3acba8c0ea6f639a6dc8d39b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E5%25A4%25A7%25E5%2588%2587%25E3%2581%25AA%25E3%2582%2582%25E3%2581%25AE.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '飛行客船ルシタニア号',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bde63187-a59b-4bb4-ae44-d2bca665c013/%E9%A3%9B%E8%A1%8C%E5%AE%A2%E8%88%B9%E3%83%AB%E3%82%B7%E3%82%BF%E3%83%8B%E3%82%A2%E5%8F%B7.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191423Z&X-Amz-Expires=86400&X-Amz-Signature=0cd8ac3011826fc4154f21fe5f6da3becdacc211f75663afc8801a6120ca6f00&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E9%25A3%259B%25E8%25A1%258C%25E5%25AE%25A2%25E8%2588%25B9%25E3%2583%25AB%25E3%2582%25B7%25E3%2582%25BF%25E3%2583%258B%25E3%2582%25A2%25E5%258F%25B7.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '翡翠回廊',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/83888d09-27e9-4a72-ab92-604075c4f67a/%E7%BF%A1%E7%BF%A0%E5%9B%9E%E5%BB%8A.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191446Z&X-Amz-Expires=86400&X-Amz-Signature=32bd07db49ebf115612d20d443178fd0b0e76ed3f6110c1df23bc496a45af0e8&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E7%25BF%25A1%25E7%25BF%25A0%25E5%259B%259E%25E5%25BB%258A.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '金の道、銀の道',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a64790aa-5c56-4a99-8bb0-d6247102f846/%E9%87%91%E3%81%AE%E9%81%93%E3%80%81%E9%8A%80%E3%81%AE%E9%81%93.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191513Z&X-Amz-Expires=86400&X-Amz-Signature=556cff16a42cef37f009a758b1d4a13d3c29a667922297ff07af0b860990af04&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E9%2587%2591%25E3%2581%25AE%25E9%2581%2593%25E3%2580%2581%25E9%258A%2580%25E3%2581%25AE%25E9%2581%2593.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '君を忘れてた',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f839a484-c3f1-4041-abf9-d0019114466c/%E5%90%9B%E3%82%92%E5%BF%98%E3%82%8C%E3%81%A6%E3%81%9F.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191532Z&X-Amz-Expires=86400&X-Amz-Signature=0aaaa874cc4299e24f6d7dbb6b0949228766a24fe2817c9ac3ac3d46926f16e6&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E5%2590%259B%25E3%2582%2592%25E5%25BF%2598%25E3%2582%258C%25E3%2581%25A6%25E3%2581%259F.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '始まりの地',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9b8da6c8-76a0-4a76-8132-839338e01c72/%E5%A7%8B%E3%81%BE%E3%82%8A%E3%81%AE%E5%9C%B0.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191608Z&X-Amz-Expires=86400&X-Amz-Signature=f237df3aa9e10b3dad62151856c5782ee8f049abcb54ddedfa7020c5e5fb9d4d&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E5%25A7%258B%25E3%2581%25BE%25E3%2582%258A%25E3%2581%25AE%25E5%259C%25B0.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '想いの眠るゆりかご',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7ca06b79-59d8-4ecc-abea-40fb3103791b/%E6%83%B3%E3%81%84%E3%81%AE%E7%9C%A0%E3%82%8B%E3%82%86%E3%82%8A%E3%81%8B%E3%81%93%E3%82%99.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191625Z&X-Amz-Expires=86400&X-Amz-Signature=ee5b480f7898b451ce580019420bb742e4466fc3965c56c5d478c6865b016c5f&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E6%2583%25B3%25E3%2581%2584%25E3%2581%25AE%25E7%259C%25A0%25E3%2582%258B%25E3%2582%2586%25E3%2582%258A%25E3%2581%258B%25E3%2581%2593%25E3%2582%2599.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: 'これが真の実力や！',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ca7e206d-0f79-4b3b-ba55-1bc40263a983/%E3%81%93%E3%82%8C%E3%81%8B%E3%82%99%E7%9C%9F%E3%81%AE%E5%AE%9F%E5%8A%9B%E3%82%84%EF%BC%81.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191807Z&X-Amz-Expires=86400&X-Amz-Signature=60c5747b68c07e8c661a14ba0879815c2cbafe3cb52473b176fdf6a2f85510c3&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E3%2581%2593%25E3%2582%258C%25E3%2581%258B%25E3%2582%2599%25E7%259C%259F%25E3%2581%25AE%25E5%25AE%259F%25E5%258A%259B%25E3%2582%2584%25EF%25BC%2581.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: 'レクルスの方石',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7e97acda-8949-4354-9c60-bcdce7bf5280/%E3%83%AC%E3%82%AF%E3%83%AB%E3%82%B9%E3%81%AE%E6%96%B9%E7%9F%B3.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191828Z&X-Amz-Expires=86400&X-Amz-Signature=281cd65efa97e2a6a4a1fe684b656ea346ae637dada2d73eb702dc5c39a242ba&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E3%2583%25AC%25E3%2582%25AF%25E3%2583%25AB%25E3%2582%25B9%25E3%2581%25AE%25E6%2596%25B9%25E7%259F%25B3.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '爆釣王よ永遠に',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/43accd4d-3e27-4fac-b892-6de53abccbb9/%E7%88%86%E9%87%A3%E7%8E%8B%E3%82%88%E6%B0%B8%E9%81%A0%E3%81%AB.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191843Z&X-Amz-Expires=86400&X-Amz-Signature=a8aeb9cc86d73f4b16bfc383b9d8aa4a17058c9cea6097b9d246a2b74068ad52&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E7%2588%2586%25E9%2587%25A3%25E7%258E%258B%25E3%2582%2588%25E6%25B0%25B8%25E9%2581%25A0%25E3%2581%25AB.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '空を見上げて Ending version',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0f1ca687-530f-4bad-96ba-164122b64e93/%E7%A9%BA%E3%82%92%E8%A6%8B%E4%B8%8A%E3%81%91%E3%82%99%E3%81%A6_Ending_version.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191948Z&X-Amz-Expires=86400&X-Amz-Signature=54c1125fa695d1bb3d07a836e8c5c563ec2bc34e1c334ec9fd0ca42e4bbfd4dc&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E7%25A9%25BA%25E3%2582%2592%25E8%25A6%258B%25E4%25B8%258A%25E3%2581%2591%25E3%2582%2599%25E3%2581%25A6%2520Ending%2520version.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '女神の機嫌は時の運',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e4952d48-fa69-47d5-a65a-559a9acc5e08/%E5%A5%B3%E7%A5%9E%E3%81%AE%E6%A9%9F%E5%AB%8C%E3%81%AF%E6%99%82%E3%81%AE%E9%81%8B.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T192020Z&X-Amz-Expires=86400&X-Amz-Signature=7262ec47b21dfee2eeeffee617f290642f6964c94c9486810e6966c0bc4da0d0&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E5%25A5%25B3%25E7%25A5%259E%25E3%2581%25AE%25E6%25A9%259F%25E5%25AB%258C%25E3%2581%25AF%25E6%2599%2582%25E3%2581%25AE%25E9%2581%258B.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '仄かに煌く光',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d6f5fb63-4da6-4596-9c28-edb5d0766ff2/%E4%BB%84%E3%81%8B%E3%81%AB%E7%85%8C%E3%81%8F%E5%85%89.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T192110Z&X-Amz-Expires=86400&X-Amz-Signature=2c2830afcc11a53a54337627d7e6ae83ff273455b75b92ae1ca8eff12526b484&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E4%25BB%2584%25E3%2581%258B%25E3%2581%25AB%25E7%2585%258C%25E3%2581%258F%25E5%2585%2589.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: '追憶',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d4f0df80-1a83-4294-a54b-136629ffcf3b/%E8%BF%BD%E6%86%B6.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T192129Z&X-Amz-Expires=86400&X-Amz-Signature=ee868143972d5309679377b520e017cfafe7b7465d98152bd2cd0437e9a5916e&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E8%25BF%25BD%25E6%2586%25B6.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: 'Cry for me, cry for you',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e8848198-0242-4057-b8bf-d67cc8c43bdf/Cry_for_me_cry_for_you.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T192234Z&X-Amz-Expires=86400&X-Amz-Signature=629b33ba89371c9757ed36f27c9debdaab0ae39332ff8089217cdbe3d39dceb6&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Cry%2520for%2520me%252C%2520cry%2520for%2520you.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: 'Cry for your Eternity',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5dc293b4-0a8a-48f2-93be-2f5b017d5a2a/Cry_for_your_Eternity.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T192306Z&X-Amz-Expires=86400&X-Amz-Signature=e7a6eec05f1b447330f5f4661bf77526092637febf2886ee9ba3742e0bc66d0d&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Cry%2520for%2520your%2520Eternity.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  },
+  {
+    name: 'Till the Night of Glory',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b0d020c9-950d-418d-8dfa-e54c4ff03858/Till_the_Night_of_Glory.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T192343Z&X-Amz-Expires=86400&X-Amz-Signature=edf74d27e4ad998e9773ecaec795a67d0920bc58836e62f812622fe47d23219f&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Till%2520the%2520Night%2520of%2520Glory.mp3%22&x-id=GetObject',
+    cover: COVER_3RD
+  }
 ]
 
 // const NETEASE_LIST = [
