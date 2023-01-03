@@ -1,7 +1,7 @@
-const musicUrl = 'https://music.163.com/song/media/outer/url?id='
+// const musicUrl = 'https://music.163.com/song/media/outer/url?id='
 
 const COVER_FC = 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/adb62bf0-ea14-4b28-825c-702a4441fea3/fc.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T181053Z&X-Amz-Expires=86400&X-Amz-Signature=9d11fac195a98f728f51908c671aa0c61bf778683024fb8230ee431f18c3fe51&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22fc.jpg%22&x-id=GetObject'
-// const COVER_SC = 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ef622ba0-2ccd-4b6c-8615-f393950cea68/sc.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T183742Z&X-Amz-Expires=86400&X-Amz-Signature=0d52bad83f593da791579ab282ee9dae06986e8542dd6596fd3e5a48fd211557&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22sc.jpg%22&x-id=GetObject'
+const COVER_SC = 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ef622ba0-2ccd-4b6c-8615-f393950cea68/sc.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T183742Z&X-Amz-Expires=86400&X-Amz-Signature=0d52bad83f593da791579ab282ee9dae06986e8542dd6596fd3e5a48fd211557&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22sc.jpg%22&x-id=GetObject'
 // const COVER_3RD = 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c712f289-f5a0-4130-baad-a61175f345d9/3rd.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T183838Z&X-Amz-Expires=86400&X-Amz-Signature=c2957378fa4331004483969236d2003e17806e5b039bed30ae25c36b2ec5dec3&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%223rd.jpg%22&x-id=GetObject'
 const OST_FC = [
   {
@@ -216,12 +216,96 @@ const OST_FC = [
   }
 ]
 const OST_SC = [
-  // {
-  //   name: '',
-  //   artist: 'Falcom Sound Team jdk',
-  //   url: '',
-  //   cover: COVER_SC
-  // }
+  {
+    name: '絆の在り処',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bcb18ce8-c3db-48e5-a1e9-15bd47295526/%E7%B5%86%E3%81%AE%E5%9C%A8%E3%82%8A%E5%87%A6.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190420Z&X-Amz-Expires=86400&X-Amz-Signature=82d06a51b7c7047add26a53a1ce0791839a20a810ffcb10f93a5a9eed53a9cdf&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E7%25B5%2586%25E3%2581%25AE%25E5%259C%25A8%25E3%2582%258A%25E5%2587%25A6.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: '惨劇の真相',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c849172-9107-4446-8bb6-aa44e33e46ef/%E6%83%A8%E5%8A%87%E3%81%AE%E7%9C%9F%E7%9B%B8.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190436Z&X-Amz-Expires=86400&X-Amz-Signature=c309e85f9cc99e315fc90eef9962e7f622957c12e3c190d3ce96de67e5fc45b0&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E6%2583%25A8%25E5%258A%2587%25E3%2581%25AE%25E7%259C%259F%25E7%259B%25B8.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: '風を共に舞う気持ち SC Ver.',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b6746a66-3b8d-4eb9-b1d5-1b01e056e834/%E9%A2%A8%E3%82%92%E5%85%B1%E3%81%AB%E8%88%9E%E3%81%86%E6%B0%97%E6%8C%81%E3%81%A1_SC_Ver..mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190508Z&X-Amz-Expires=86400&X-Amz-Signature=825debd7a7c94a1576cb0c4dd2deb7d62ff4ab00041839938c0e0fc48fa477cd&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E9%25A2%25A8%25E3%2582%2592%25E5%2585%25B1%25E3%2581%25AB%25E8%2588%259E%25E3%2581%2586%25E6%25B0%2597%25E6%258C%2581%25E3%2581%25A1%2520SC%2520Ver..mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: '夢の続き',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/75ec730b-333e-4e94-b67a-c5ccf5df7150/%E5%A4%A2%E3%81%AE%E7%B6%9A%E3%81%8D.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190608Z&X-Amz-Expires=86400&X-Amz-Signature=419c51bbbd0f02e2d4fbc7c8170b4628e76c01e9e6e9cb808e7b6edf9f24d23e&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E5%25A4%25A2%25E3%2581%25AE%25E7%25B6%259A%25E3%2581%258D.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: '迫りくる脅威',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f164f059-1528-4bb9-b927-8a26f5bdfecc/%E8%BF%AB%E3%82%8A%E3%81%8F%E3%82%8B%E8%84%85%E5%A8%81.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190635Z&X-Amz-Expires=86400&X-Amz-Signature=5933c1bf7cfd748dc0f72a2df23a5c53c0519101abb100d6a13156e92dd3ad13&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E8%25BF%25AB%25E3%2582%258A%25E3%2581%258F%25E3%2582%258B%25E8%2584%2585%25E5%25A8%2581.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: '希望の行方',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/84f27534-9aef-483c-b217-643a841e4a2c/%E5%B8%8C%E6%9C%9B%E3%81%AE%E8%A1%8C%E6%96%B9.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190656Z&X-Amz-Expires=86400&X-Amz-Signature=2e93745e6c233e625f007ac02a31b23df24c35b83380b7432cd893ebc6c72253&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E5%25B8%258C%25E6%259C%259B%25E3%2581%25AE%25E8%25A1%258C%25E6%2596%25B9.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: '星の在り処 Instrumental Ver.',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cdb3742d-6a62-4188-8cdc-7b414ef8b35f/%E6%98%9F%E3%81%AE%E5%9C%A8%E3%82%8A%E5%87%A6_Instrumental_Ver..mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190720Z&X-Amz-Expires=86400&X-Amz-Signature=eaca3a5f7e6b988258ea3fa76d7f32e9e9d8e49d3d5ce8ed08d8614c03fa71ae&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E6%2598%259F%25E3%2581%25AE%25E5%259C%25A8%25E3%2582%258A%25E5%2587%25A6%2520Instrumental%2520Ver..mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: '銀の意志 金の翼',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0a8acfb7-74e0-4bfb-bdec-1d4358a76ef8/%E9%8A%80%E3%81%AE%E6%84%8F%E5%BF%97_%E9%87%91%E3%81%AE%E7%BF%BC.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190740Z&X-Amz-Expires=86400&X-Amz-Signature=c92c5346016e8bbbb7c460b4488f05bb2fbdf77ccee49263556eed1bc3153638&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E9%258A%2580%25E3%2581%25AE%25E6%2584%258F%25E5%25BF%2597%2520%25E9%2587%2591%25E3%2581%25AE%25E7%25BF%25BC.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: '銀の意志 Evolution Ver.',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/201ec44a-96b0-4f7c-bded-bbd8d1951a79/%E9%8A%80%E3%81%AE%E6%84%8F%E5%BF%97_Evolution_Ver..mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190755Z&X-Amz-Expires=86400&X-Amz-Signature=5a65dee52725be27e01d107808a8163b3b354415840dab342871a76f971b00aa&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E9%258A%2580%25E3%2581%25AE%25E6%2584%258F%25E5%25BF%2597%2520Evolution%2520Ver..mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: 'Fateful confrontation',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/41f26b3e-f9ab-412e-baa3-c5306e7833c3/Fateful_confrontation.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190901Z&X-Amz-Expires=86400&X-Amz-Signature=54cf75e438e1b2a8b441a46388b4b3ab8991d697fb543293fdd306e762d105b2&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Fateful%2520confrontation.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: 'Feeling Danger Nearby',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/286a00eb-e2a0-4973-986e-2974e1f71118/Feeling_Danger_Nearby.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190916Z&X-Amz-Expires=86400&X-Amz-Signature=624a4d798c5ccc1c78aeb17fdbd959ceb78c04a357b3e8813b5ab4738b98a350&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Feeling%2520Danger%2520Nearby.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: 'I swear…',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3c11f849-5b92-4378-a06e-0704111b994a/I_swear....mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190941Z&X-Amz-Expires=86400&X-Amz-Signature=a56012afe018512df817bfa1b3c422c8e73f59e858be410564bdbf29e6145a68&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22I%2520swear....mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: 'Obstructive Existence',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7f050de5-476a-42f7-b029-92d453574444/Obstructive_Existence.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T190957Z&X-Amz-Expires=86400&X-Amz-Signature=4c1559026dcf9e517d21a56fc499b888d1f7f3fe5f768da635fcfd954268652b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Obstructive%2520Existence.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: 'Shine of Eidos 空の軌跡',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/56f8455a-7fec-4a47-816a-1b89cc7bd55a/Shine_of_Eidos_%EF%BD%9E%E7%A9%BA%E3%81%AE%E8%BB%8C%E8%B7%A1%EF%BD%9E.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191028Z&X-Amz-Expires=86400&X-Amz-Signature=ed37b285a9ddeb4ce41fbdb6b3cd7988e7c6c094f25fa3f0d4fed7b1df48d70a&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Shine%2520of%2520Eidos%2520%25EF%25BD%259E%25E7%25A9%25BA%25E3%2581%25AE%25E8%25BB%258C%25E8%25B7%25A1%25EF%25BD%259E.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  },
+  {
+    name: 'ル＝ロックルへようこそ',
+    artist: 'Falcom Sound Team jdk',
+    url: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6c553164-0316-430e-bf29-eced71e207bb/%E3%83%AB%EF%BC%9D%E3%83%AD%E3%83%83%E3%82%AF%E3%83%AB%E3%81%B8%E3%82%88%E3%81%86%E3%81%93%E3%81%9D.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T191121Z&X-Amz-Expires=86400&X-Amz-Signature=eb5ca379ebb52a1a5fa2547bfe087b1ef4204fd40eaa47e337bdef07189cdd3a&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25E3%2583%25AB%25EF%25BC%259D%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2583%25AB%25E3%2581%25B8%25E3%2582%2588%25E3%2581%2586%25E3%2581%2593%25E3%2581%259D.mp3%22&x-id=GetObject',
+    cover: COVER_SC
+  }
 ]
 const OST_3RD = [
   // {
