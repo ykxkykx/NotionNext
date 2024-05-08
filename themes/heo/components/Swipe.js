@@ -11,7 +11,7 @@ export function Swipe({ items }) {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const handleClick = (item) => {
-    if (isBrowser) {
+    if (isBrowser && item?.url) {
       window.open(item?.url)
     }
   }
@@ -41,13 +41,13 @@ export function Swipe({ items }) {
                 animation-duration: 0.5s;
                 animation-fill-mode: forwards;
             }
-            
+
             .slide-out {
                 animation-name: slide-out;
                 animation-duration: 0.5s;
                 animation-fill-mode: forwards;
             }
-            
+
             @keyframes slide-in {
                 from {
                 transform: translateY(100%);
@@ -56,7 +56,7 @@ export function Swipe({ items }) {
                 transform: translateY(0);
                 }
             }
-            
+
             @keyframes slide-out {
                 from {
                 transform: translateY(0);
