@@ -68,14 +68,14 @@ const Player = () => {
       />
       {meting ? (
         <meting-js
-          fixed='true'
+          fixed
           type='playlist'
-          preload='auto'
+          // preload='auto'
           lrc-type={siteConfig('MUSIC_PLAYER_METING_LRC_TYPE')}
-          api={siteConfig(
-            'MUSIC_PLAYER_METING_API',
-            'https://api.i-meto.com/meting/api'
-          )}
+          // api={siteConfig(
+          //   'MUSIC_PLAYER_METING_API',
+          //   'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&auth=:auth&r=:r'
+          // )}
           autoplay={autoPlay}
           order={siteConfig('MUSIC_PLAYER_ORDER')}
           server={siteConfig('MUSIC_PLAYER_METING_SERVER')}
