@@ -58,7 +58,7 @@ const Hero = props => {
       id='header'
       style={{ zIndex: 1 }}
       className=' w-full h-screen relative bg-black'>
-      <div className='text-white absolute flex flex-col h-full items-center justify-center w-full '>
+      <div className='text-white absolute flex flex-col h-full items-center justify-center w-full ' style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7))'}}>
         {/* 站点标题 */}
         <div className='text-4xl md:text-5xl shadow-text'>
           {siteInfo?.title || siteConfig('TITLE')}
