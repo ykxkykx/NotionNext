@@ -1,7 +1,8 @@
-import React, { useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import throttle from 'lodash.throttle'
 import { uuidToId } from 'notion-utils'
 import Progress from './Progress'
+import { useGlobal } from '@/lib/global'
 
 /**
  * 目录导航组件
@@ -10,8 +11,9 @@ import Progress from './Progress'
  * @constructor
  */
 const Catalog = ({ toc }) => {
+  const { locale } = useGlobal()
   // 监听滚动事件
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', actionSectionScrollSpy)
     actionSectionScrollSpy()
     return () => {
@@ -24,10 +26,10 @@ const Catalog = ({ toc }) => {
   const tocIds = []
 
   // 同步选中目录事件
-  const [activeSection, setActiveSection] = React.useState(null)
+  const [activeSection, setActiveSection] = useState(null)
 
-  const throttleMs = 100
-  const actionSectionScrollSpy = React.useCallback(throttle(() => {
+  const throttleMs = 200
+  const actionSectionScrollSpy = useCallback(throttle(() => {
     const sections = document.getElementsByClassName('notion-h')
     let prevBBox = null
     let currentSectionId = activeSection
@@ -59,8 +61,8 @@ const Catalog = ({ toc }) => {
     return <></>
   }
 
-  return <div className='px-3'>
-    <div className='w-full'><i className='mr-1 fas fa-stream' /> 目录</div>
+  return <div className='px-3 py-1'>
+    <div className='w-full'><i className='mr-1 fas fa-stream' />{locale.COMMON.TABLE_OF_CONTENTS}</div>
     <div className='w-full py-3'>
       <Progress />
     </div>
@@ -77,7 +79,7 @@ const Catalog = ({ toc }) => {
             notion-table-of-contents-item-indent-level-${tocItem.indentLevel} `}
             >
               <span style={{ display: 'inline-block', marginLeft: tocItem.indentLevel * 16 }}
-                className={`${activeSection === id && ' font-bold text-indigo-400 underline'}`}
+                className={`truncate ${activeSection === id ? 'font-bold text-indigo-600' : ''}`}
               >
                 {tocItem.text}
               </span>

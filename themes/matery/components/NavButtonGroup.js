@@ -1,5 +1,3 @@
-
-import React from 'react'
 import Link from 'next/link'
 
 /**
@@ -25,9 +23,9 @@ const NavButtonGroup = (props) => {
             className='text-center w-full md:mx-6 md:w-40 md:h-14 lg:h-20 h-14 justify-center items-center flex border-2 cursor-pointer rounded-lg glassmorphism hover:bg-white hover:text-black duration-200 font-bold hover:scale-110 transform'>
                 {category.name}
             </Link>
-        );
+        )
       })}
     </nav>
-  );
+  )
 }
 export default NavButtonGroup

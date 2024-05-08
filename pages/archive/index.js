@@ -1,33 +1,71 @@
-import { getGlobalNotionData } from '@/lib/notion/getNotionData'
-import React from 'react'
-import { useGlobal } from '@/lib/global'
-import * as ThemeMap from '@/themes'
 import BLOG from '@/blog.config'
+import { siteConfig } from '@/lib/config'
+import { getGlobalData } from '@/lib/db/getSiteData'
+import { isBrowser } from '@/lib/utils'
+import { formatDateFmt } from '@/lib/utils/formatDate'
+import { getLayoutByTheme } from '@/themes/theme'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 const ArchiveIndex = props => {
-  const { theme, locale } = useGlobal()
-  const ThemeComponents = ThemeMap[theme]
-  const { siteInfo } = props
-  const meta = {
-    title: `${locale.NAV.ARCHIVE} | ${siteInfo?.title}`,
-    description: siteInfo?.description,
-    image: siteInfo?.pageCover,
-    slug: 'archive',
-    type: 'website'
-  }
+  // 根据页面路径加载不同Layout文件
+  const Layout = getLayoutByTheme({
+    theme: siteConfig('THEME'),
+    router: useRouter()
+  })
 
-  return <ThemeComponents.LayoutArchive {...props} meta={meta} />
+  useEffect(() => {
+    if (isBrowser) {
+      const anchor = window.location.hash
+      if (anchor) {
+        setTimeout(() => {
+          const anchorElement = document.getElementById(anchor.substring(1))
+          if (anchorElement) {
+            anchorElement.scrollIntoView({ block: 'start', behavior: 'smooth' })
+          }
+        }, 300)
+      }
+    }
+  }, [])
+
+  return <Layout {...props} />
 }
 
-export async function getStaticProps() {
-  const props = await getGlobalNotionData({ from: 'archive-index' })
+export async function getStaticProps({ locale }) {
+  const props = await getGlobalData({ from: 'archive-index', locale })
   // 处理分页
-  props.posts = props.allPages.filter(page => page.type === 'Post' && page.status === 'Published')
+  props.posts = props.allPages?.filter(
+    page => page.type === 'Post' && page.status === 'Published'
+  )
+  delete props.allPages
+
+  const postsSortByDate = Object.create(props.posts)
+
+  postsSortByDate.sort((a, b) => {
+    return b?.publishDate - a?.publishDate
+  })
+
+  const archivePosts = {}
+
+  postsSortByDate.forEach(post => {
+    const date = formatDateFmt(post.publishDate, 'yyyy-MM')
+    if (archivePosts[date]) {
+      archivePosts[date].push(post)
+    } else {
+      archivePosts[date] = [post]
+    }
+  })
+
+  props.archivePosts = archivePosts
   delete props.allPages
 
   return {
     props,
-    revalidate: BLOG.NEXT_REVALIDATE_SECOND
+    revalidate: siteConfig(
+      'NEXT_REVALIDATE_SECOND',
+      BLOG.NEXT_REVALIDATE_SECOND,
+      props.NOTION_CONFIG
+    )
   }
 }
 
